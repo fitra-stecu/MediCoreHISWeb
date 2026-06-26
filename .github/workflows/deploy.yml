@@ -12,9 +12,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Install pnpm        # ← tambahkan ini
-        run: npm install -g pnpm  # ← dan ini
-      - run: pnpm install
+      - name: Install pnpm
+        run: npm install -g pnpm
+      - run: pnpm install --no-frozen-lockfile  # ← tambahkan flag ini
       - run: pnpm build
       - name: Add .nojekyll
         run: touch dist/.nojekyll
