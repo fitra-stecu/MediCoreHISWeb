@@ -12,10 +12,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install pnpm        # ← tambahkan ini
+        run: npm install -g pnpm  # ← dan ini
       - run: pnpm install
       - run: pnpm build
-      - name: Add .nojekyll        # ← tambahkan ini
-        run: touch dist/.nojekyll  # ← dan ini
+      - name: Add .nojekyll
+        run: touch dist/.nojekyll
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
