@@ -1,0 +1,2 @@
+root: D:\MediCore_HIS_Web\nvm
+path: D:\MediCore_HIS_Web\nodejs

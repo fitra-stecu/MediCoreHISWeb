@@ -1,0 +1,15 @@
+packages:
+  - '.'
+allowBuilds:
+  '@tailwindcss/oxide': true
+  cloudflared: true
+  core-js: true
+  esbuild: true
+supportedArchitectures:
+  os:
+    - linux
+  cpu:
+    - x64
+    - arm64
+  libc:
+    - glibc
